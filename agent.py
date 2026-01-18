@@ -34,7 +34,7 @@ def run_crew(topic: str):
     # 3. TASKS
     task_research = Task(description=f"Find 3 shocking facts about {topic}.", expected_output="Bullet points.", agent=researcher)
     task_script = Task(description="Write a 60s script.", expected_output="Full script.", agent=scriptwriter, context=[task_research])
-    task_strategy = Task(description="Generate Titles & Hashtags.", expected_output="Metadata.", agent=strategist, context=[task_script])
+    task_strategy = Task(description="Generate 3 Video Titles Description & Hashtags.", expected_output="Metadata.", agent=strategist, context=[task_script])
 
     # 4. RUN
     crew = Crew(
